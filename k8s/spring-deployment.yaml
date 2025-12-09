@@ -18,3 +18,10 @@ spec:
           image: yasserw/student-management:latest
           ports:
             - containerPort: 8089
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql.devops.svc.cluster.local:3306/mydb
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: rootpassword
